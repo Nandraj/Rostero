@@ -13,7 +13,7 @@ class Product(models.Model):
     code = models.CharField(max_length=50, null=True)
     price = models.FloatField()
     opg_stock = models.FloatField()
-    # image =
+    image = models.ImageField(upload_to='images/')
 
     category = models.ForeignKey(
         Category, null=True, on_delete=models.SET_NULL)
