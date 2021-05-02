@@ -10,6 +10,9 @@ def apiOverview(request):
         'Customer': '/customer/',
         'Sale': '/sale/',
         'SaleReturn': '/salereturn/',
+        'Supplier': '/supplier/',
+        'purchase': '/purchase/',
+        'PurchaseReturn': '/purchasereturn/',
         'DateFormat': 'YYYY-MM-DDThh:mm'
     }
     return Response(api_urls)

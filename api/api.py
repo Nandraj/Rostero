@@ -3,7 +3,10 @@ from .models import (
     Product,
     Customer,
     Sale,
-    SaleReturn
+    SaleReturn,
+    Supplier,
+    Purchase,
+    PurchaseReturn
 )
 from rest_framework import viewsets, permissions
 from .serializers import (
@@ -11,7 +14,10 @@ from .serializers import (
     ProductSerializer,
     CustomerSerializer,
     SaleSerializer,
-    SaleReturnSerializer
+    SaleReturnSerializer,
+    SupplierSerializer,
+    PurchaseSerializer,
+    PurchaseReturnSerializer
 )
 
 permission_cls = [
@@ -48,3 +54,21 @@ class SaleReturnViewSet(viewsets.ModelViewSet):
     queryset = SaleReturn.objects.all()
     permission_classes = permission_cls
     serializer_class = SaleReturnSerializer
+
+
+class SupplierViewSet(viewsets.ModelViewSet):
+    queryset = Supplier.objects.all()
+    permission_classes = permission_cls
+    serializer_class = SupplierSerializer
+
+
+class PurchaseViewSet(viewsets.ModelViewSet):
+    queryset = Purchase.objects.all()
+    permission_classes = permission_cls
+    serializer_class = PurchaseSerializer
+
+
+class PurchaseReturnViewSet(viewsets.ModelViewSet):
+    queryset = PurchaseReturn.objects.all()
+    permission_classes = permission_cls
+    serializer_class = PurchaseReturnSerializer

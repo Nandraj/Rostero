@@ -6,7 +6,10 @@ from .api import (
     ProductViewSet,
     CustomerViewSet,
     SaleViewSet,
-    SaleReturnViewSet
+    SaleReturnViewSet,
+    SupplierViewSet,
+    PurchaseViewSet,
+    PurchaseReturnViewSet
 )
 
 router = routers.DefaultRouter()
@@ -15,6 +18,9 @@ router.register('product', ProductViewSet, 'product')
 router.register('customer', CustomerViewSet, 'customer')
 router.register('sale', SaleViewSet, 'sale')
 router.register('salereturn', SaleReturnViewSet, 'salereturn')
+router.register('supplier', SupplierViewSet, 'supplier')
+router.register('purchase', PurchaseViewSet, 'purchase')
+router.register('purchasereturn', PurchaseReturnViewSet, 'purchasereturn')
 
 
 urlpatterns = [

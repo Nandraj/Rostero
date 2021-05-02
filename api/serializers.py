@@ -4,7 +4,10 @@ from .models import (
     Product,
     Customer,
     Sale,
-    SaleReturn
+    SaleReturn,
+    Supplier,
+    Purchase,
+    PurchaseReturn
 )
 
 
@@ -35,4 +38,22 @@ class SaleSerializer(serializers.ModelSerializer):
 class SaleReturnSerializer(serializers.ModelSerializer):
     class Meta:
         model = SaleReturn
+        fields = '__all__'
+
+
+class SupplierSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Supplier
+        fields = '__all__'
+
+
+class PurchaseSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Purchase
+        fields = '__all__'
+
+
+class PurchaseReturnSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = PurchaseReturn
         fields = '__all__'
