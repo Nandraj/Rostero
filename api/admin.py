@@ -10,6 +10,12 @@ from .models import (
     PurchaseReturn
 )
 
+
+admin.site.site_header = 'Rostero Admin'
+admin.site.site_title = 'Rostero Admin Area'
+admin.site.index_title = 'Welcome to the Rostero admin area'
+
+
 admin.site.register(Category)
 admin.site.register(Product)
 admin.site.register(Customer)
