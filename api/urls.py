@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 from . import views
 from rest_framework import routers
 from .api import (
@@ -24,5 +24,6 @@ router.register('purchasereturn', PurchaseReturnViewSet, 'purchasereturn')
 
 
 urlpatterns = [
-    path('', views.apiOverview)
-] + router.urls
+    path('', views.apiOverview),
+    path('', include(router.urls))
+]
