@@ -139,3 +139,7 @@ CORS_ORIGIN_WHITELIST = [
     'http://127.0.0.1:3000',  # for react
     'http://127.0.0.1:5500',  # for vs code live server
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAuthenticated',)
+}
