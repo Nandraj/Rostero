@@ -25,3 +25,13 @@ check its running
 1. cd html
 2. python3 -m http.server 5500 
 3. Go to localhost:5500 or http://127.0.0.1:5500
+
+
+(IV) How to get and use JWToken in postman
+1. send post request to /api/token/ with Body -> x-www-form-urlencoded -> give username: and password:
+2. step 1 returns "access" and "refresh" token
+3. To use access token put it into Authorization -> Bearer Token 
+
+(V) How to refresh token in postman
+1. send post request to /api/token/refresh/ with Body -> x-www-form-urlencoded -> refresh: refresh token
+2. step 1 will return new access token
