@@ -1,5 +1,5 @@
 from django.urls import path, include
-from . import views
+# from . import views
 from rest_framework import routers
 from .api import (
     CategoryViewSet,
@@ -24,6 +24,5 @@ router.register('purchasereturn', PurchaseReturnViewSet, 'purchasereturn')
 
 
 urlpatterns = [
-    path('', views.apiOverview),
     path('', include(router.urls))
 ]
